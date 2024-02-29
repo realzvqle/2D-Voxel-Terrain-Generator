@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>_2DMineCraft</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src\types.fs" />
+    <Compile Include="src\controls.fs" />
+    <Compile Include="src\terrainGenerator.fs" />
+    <Compile Include="src\mainScene.fs" />
+    <Compile Include="src\scenemanager.fs" />
+    <Compile Include="src\createWindow.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RandomAccessPerlinNoise" Version="1.0.1" />
+    <PackageReference Include="Raylib-cs" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
