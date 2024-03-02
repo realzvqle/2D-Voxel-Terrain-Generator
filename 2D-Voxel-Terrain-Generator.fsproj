@@ -10,6 +10,7 @@
     <Compile Include="src\types.fs" />
     <Compile Include="src\controls.fs" />
     <Compile Include="src\terrainGenerator.fs" />
+    <Compile Include="src\time.fs" />
     <Compile Include="src\mainScene.fs" />
     <Compile Include="src\scenemanager.fs" />
     <Compile Include="src\createWindow.fs" />

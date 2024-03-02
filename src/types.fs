@@ -22,4 +22,8 @@ type gameData = {
     mutable window: window
     mutable camera: Camera2D
     mutable currentScene: int
+    mutable backgroundColor: Color
+    mutable isDay: bool
+    mutable speed: int
+    mutable time: int
 };

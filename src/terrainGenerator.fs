@@ -18,7 +18,6 @@ let spawnTrees (currentScale: int) (currentIndex: int) =
 
 
 let chunkGen (gameData: gameData) (beginning: int) (ending: int) =
-    Raylib.DrawFPS(10, 10)
     let mutable xy = 0
     if Raylib.IsKeyPressed(KeyboardKey.R) = true then 
         size <- float (Raylib.GetRandomValue(30, 600))

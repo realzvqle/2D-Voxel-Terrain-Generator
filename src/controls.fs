@@ -21,3 +21,11 @@ let controls (gameData: gameData) =
         gameData.camera.Zoom <- gameData.camera.Zoom + 0.001f
     if Raylib.IsKeyDown(KeyboardKey.P) = true then
         gameData.camera.Zoom <- gameData.camera.Zoom - 0.001f
+    if Raylib.IsKeyPressed(KeyboardKey.N) = true then
+        if gameData.speed > 0 then
+            gameData.speed <- gameData.speed - 7
+            if gameData.speed = -5 || gameData.speed = -6 then  gameData.speed <- 1
+        else gameData.speed <- 1
+    if Raylib.IsKeyPressed(KeyboardKey.M) = true then
+        if gameData.speed < 102929 then
+            gameData.speed <- gameData.speed + 7

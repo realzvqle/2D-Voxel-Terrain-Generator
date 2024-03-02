@@ -25,10 +25,10 @@ let setupCamera : Camera2D =
 
 
 let createWindow =
-    let mutable gameData: gameData = {window = setupWindow; camera = setupCamera; currentScene = 9}
+    let mutable gameData: gameData = {window = setupWindow; camera = setupCamera; currentScene = 9; backgroundColor = Color(0, 220, 220, 255); isDay = true; speed = 30; time = 0}
 
     printfn "X: %f, Y: %f, Name: %s" gameData.window.size.x gameData.window.size.y gameData.window.name
-    printfn "\nMove Camera -> WASD\nZoom In -> O\nZoom Out -> P\nGenerate New Terrain -> R"
+    printfn "\nMove Camera -> WASD\nZoom In -> O\nZoom Out -> P\nGenerate New Terrain -> R\nIncrease Speed Of Time -> N\nDecrease Speed Of Time -> M"
     Raylib.SetTraceLogLevel(TraceLogLevel.Fatal)
 
     Raylib.InitWindow((int)gameData.window.size.x, (int)gameData.window.size.y, gameData.window.name);
@@ -39,7 +39,7 @@ let createWindow =
         
         sceneManager gameData
             
-        Raylib.ClearBackground(Color.SkyBlue)
+        Raylib.ClearBackground(gameData.backgroundColor)
         Raylib.EndDrawing()
 
     Raylib.CloseWindow()
